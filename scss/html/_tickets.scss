@@ -1,0 +1,51 @@
+/* estilos del main tickets */
+
+main {
+    h2 {
+        @include titulo;
+        color: nth($colores, 1);
+        font-size: 2rem;
+    }
+    .espacio-interno {
+        padding: 1rem 0 1rem 0;
+    }
+    div {
+        padding: 0;
+        .cursiva {
+            @extend %estilos-font;
+            font-style: italic;
+            padding: 0;
+            color: $color-texto;
+        }
+        ul {
+            text-align: center;
+            padding: 2rem;
+            margin: 0 1rem 1.3rem 1rem;
+            border: 2px solid nth($colores, 3);
+            li {
+                list-style: none;
+                color: $color-texto;
+                padding: 0.7rem;
+                margin-bottom: 1rem;
+                span {
+                    color: nth($colores, 2);
+                    font-size: 1.1rem;
+                }
+            }
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: nth($colores, 1);
+                background-color: $color-botones;
+                padding: 0.7rem;
+                @include boton;
+            }
+            a:hover {
+                color: nth($colores, 1);
+            }
+        }
+    }
+    .subtitulo {
+        @extend %estilos-font;
+    }
+}
